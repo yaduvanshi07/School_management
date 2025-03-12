@@ -1,5 +1,4 @@
-const API_BASE_URL = "http://localhost:5000"; // Change if your backend runs on a different port
-
+const API_BASE_URL = "https://yaduvanshi07.github.io/School_management/";
 async function addSchool() {
     const name = document.getElementById("name").value;
     const address = document.getElementById("address").value;
