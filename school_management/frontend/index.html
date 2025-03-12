@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏫 School Management System</h1>
+
+        <!-- Add School Section -->
+        <section class="form-section">
+            <h2>Add a School</h2>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="School Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="number" step="any" id="latitude" placeholder="Latitude" required>
+                <input type="number" step="any" id="longitude" placeholder="Longitude" required>
+                <button onclick="addSchool()">➕ Add School</button>
+            </div>
+            <p id="addMessage"></p>
+        </section>
+
+        <hr>
+
+        <!-- List Schools Section -->
+        <section class="form-section">
+            <h2>List Schools</h2>
+            <div class="input-group">
+                <input type="number" step="any" id="userLatitude" placeholder="Your Latitude" required>
+                <input type="number" step="any" id="userLongitude" placeholder="Your Longitude" required>
+                <button onclick="listSchools()">📍 Find Schools</button>
+            </div>
+            <p id="listMessage"></p>
+        </section>
+
+        <table id="schoolTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Distance (km)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
